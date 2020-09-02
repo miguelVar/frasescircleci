@@ -22,4 +22,4 @@ workflows:
             - aws-ecr/build-and-push-image
           family: 'proyectofrases'
           cluster-name: 'testkluster'
-          container-image-name-updates: 'container=testkluster,tag=${CIRCLE_SHA1}'
+          container-image-name-updates: 'container=--,tag=${CIRCLE_SHA1}'
