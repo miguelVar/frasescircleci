@@ -20,6 +20,6 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
-          family: 'proyecto-frases-circle-service'
+          family: 'proyectofrases'
           cluster-name: 'testkluster'
           container-image-name-updates: 'container=proyecto-frases-circle-service,tag=${CIRCLE_SHA1}'
