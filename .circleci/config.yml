@@ -21,5 +21,5 @@ workflows:
           requires:
             - aws-ecr/build-and-push-image
           family: 'proyecto-frases-circle-service'
-          cluster-name: 'proyecto-frases-circle-cluster'
+          cluster-name: 'testkluster'
           container-image-name-updates: 'container=proyecto-frases-circle-service,tag=${CIRCLE_SHA1}'
