@@ -17,9 +17,9 @@ workflows:
           region: AWS_REGION
           repo: proyecto-frases-circle
           tag: "$CIRCLE_SHA1"
-#      - aws-ecs/deploy-service-update:
-#          requires:
-#            - aws-ecr/build-and-push-image
-#          family: 'proyectofrases'
-#          cluster-name: 'testkluster'
-#          container-image-name-updates: 'container=--,tag=${CIRCLE_SHA1}'
+      - aws-ecs/deploy-service-update:
+          requires:
+            - aws-ecr/build-and-push-image
+          family: 'proyectofrases-service'
+          cluster-name: 'proyectofrases-service'
+          container-image-name-updates: 'container=proyectofrases-service,tag=${CIRCLE_SHA1}'
